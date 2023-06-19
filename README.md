@@ -1,24 +1,6 @@
-# simple-socket
+# fs-31
+    Установить socket.io на клиент и сервер. В качестве клиента рекомендуется создать простое приложение на Vue. 
+    Произвести подключение клиента к серверу, проверить работу с помощью вывода в console.log. 
+    Сделать коммит и пуш, приложить ссылку на репозиторий.
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+    
