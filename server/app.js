@@ -26,6 +26,15 @@ const io = new Server(httpServer, {
 
 io.on("connection", (socket) => {
     console.log(`Socket init as ${socket}`);
+    // console.log(socket);
+
+    socket.emit("handshake", "Welcome to ourChat!");
+    socket.on('message', (arg)=>{
+        console.log(arg);
+    });
+    socket.on("disconnect", (reason)=>{
+        console.log(reason);
+    });
 });
 
 httpServer.listen(3001);

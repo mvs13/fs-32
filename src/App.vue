@@ -1,5 +1,5 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img class="logo-img" alt="Our Chat" src="./assets/logo-online-chat.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
@@ -8,6 +8,10 @@ import HelloWorld from './components/HelloWorld.vue'
 const { io } = require("socket.io-client");
 const socket = io('http://localhost:3001');
 
+socket.on('handshake', (arg)=>{
+  console.log(arg);
+});
+
 export default {
   name: 'App',
   components: {
@@ -15,6 +19,7 @@ export default {
   },
   created(){
     console.log(`Socket client ${socket}`);
+    console.log(socket);
   }
 
 }
@@ -28,5 +33,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.logo-img {
+  width: 200px;
 }
 </style>
